@@ -9,13 +9,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('shizuku.jpg'); 
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
 }
+
 .intro-container {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8); 
@@ -23,7 +24,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    width: 100%;
+    width: 90%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -60,6 +61,32 @@ body {
     margin: 20px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .discord-widget:hover {
     transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .intro-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+    .intro-titulo {
+        font-size: 2em;
+    }
+    .intro-texto {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-container {
+        padding: 20px;
+    }
+    .intro-titulo {
+        font-size: 1.8em;
+    }
+    .intro-texto {
+        font-size: 0.9em;
+    }
 }

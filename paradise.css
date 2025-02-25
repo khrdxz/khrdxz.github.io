@@ -2,7 +2,7 @@
 
 body {
     font-family: "Poppins", serif;
-    font-weight: 200;
+    font-weight: 400;
     font-style: normal;
     margin: 0;
     padding: 0;
@@ -16,7 +16,6 @@ body {
     background-repeat: no-repeat; 
     background-attachment: fixed; 
 }
-
 .intro-container {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8); 
@@ -27,44 +26,55 @@ body {
     width: 90%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .intro-container:hover {
     transform: scale(1.02); 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
-
 .intro-titulo {
     font-size: 2.5em;
     color: #333;
     margin-bottom: 20px;
     transition: transform 0.3s ease, color 0.3s ease; 
 }
-
 .intro-titulo:hover {
     transform: scale(1.04); 
     color: #c9184a; 
 }
-
 .intro-texto {
     text-decoration: none;
     font-size: 1.2em;
     line-height: 1.6;
     transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .intro-texto:hover {
     transform: scale(1.05);
 }
-
 .discord-widget {
     display: flex;
     margin: 20px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .discord-widget:hover {
     transform: scale(1.02);
 }
+.intro-tela {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #590d22;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: opacity 1s ease-in-out; 
+}
+.hidden{
+    opacity: 0; pointer-events: none; 
+}
+.conteudo{
+    display: none; padding: 20px;
+}
+
 
 @media (max-width: 768px) {
     .intro-container {

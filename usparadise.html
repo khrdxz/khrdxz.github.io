@@ -17,16 +17,30 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀"/>
     <meta name="twitter:description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿" />
-    <meta name="twitter:image" content="https://github.com/khrdxz/khrdxz.github.io/blob/main/frieren.jpg?raw=true"/>
+    <meta name="twitter:image" content="https://github.com/khrdxz/khrdxz.github.io/blob/main/asuka.jpg?raw=true"/>
     <meta name="twitter:url" content="https://discord.gg/ndD5VdYH"/>
 </head>
 <body>   
-    <div class="intro-container">
-        <h2 class="intro-titulo">Bem-Vindo ao site da 𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</h1>
-        <p class="intro-texto"><a class="intro-texto" href="https://discord.gg/ndD5VdYH" target="_blank">O Nosso Paraíso</a></p>    
-    </div>
-    <div class="discord-widget">
-        <iframe id="discord-base" src="https://discord.com/widget?id=1318417511779405905&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    </div>  
+    
+<div class="intro-container">
+    <h2 class="intro-titulo">Bem-Vindos ao site da 𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</h1>
+    <p class="intro-texto"><a class="intro-texto" href="https://discord.gg/ndD5VdYH" target="_blank">O nosso paraíso</a></p>    
+</div>
+<div class="discord-widget">
+    <iframe id="discord-base" src="https://discord.com/widget?id=1318417511779405905&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+</div>
+    
+<div class="intro-tela" id="introScreen">𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</div>
+<div class="conteudo" id="mainContent"></div>
+    
+<script>
+    setTimeout(() => {
+        document.getElementById('introScreen').classList.add('hidden');
+        setTimeout(() => {
+            document.getElementById('introScreen').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+        }, 1000);
+    }, 2500); // Tempo da tela de apresentação (3 segundos)
+</script>  
 </body>
 </html>

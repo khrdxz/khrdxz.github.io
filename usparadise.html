@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢</title>
     <link rel="stylesheet" href="paradise.css">
-
-    <!-- Open Graph Meta Tags (Facebook, WhatsApp, LinkedIn) -->
+    
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀" />
     <meta property="og:description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿" />
     <meta property="og:image" content="https://github.com/khrdxz/khrdxz.github.io/blob/main/frieren.jpg?raw=true" />
     <meta property="og:url" content="https://discord.gg/ndD5VdYH" />
     <meta property="og:type" content="website" />
 
-    <!-- Twitter Card Meta Tags (Twitter) -->
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀"/>
     <meta name="twitter:description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿" />
@@ -21,27 +21,29 @@
     <meta name="twitter:url" content="https://discord.gg/ndD5VdYH"/>
 </head>
 <body>   
-    
-<div class="intro-container">
-    <h2 class="intro-titulo">Bem-Vindos ao site da 𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</h1>
-    <p class="intro-texto"><a class="intro-texto" href="https://discord.gg/ndD5VdYH" target="_blank">O nosso paraíso</a></p>    
-</div>
-<div class="discord-widget">
-    <iframe id="discord-base" src="https://discord.com/widget?id=1318417511779405905&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-</div>
-    
-<div class="intro-tela" id="introScreen">𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</div>
-<div class="conteudo" id="mainContent"></div>
-    
-<script>
-    setTimeout(() => {
-        document.getElementById('introScreen').classList.add('hidden');
+    <div class="intro-tela" id="introScreen">𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</div>
+
+    <div class="container">
+        <div class="intro-container">
+            <h2 class="intro-titulo">Bem-Vindos à 𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</h2>
+            <a class="discord-btn" href="https://discord.gg/ndD5VdYH" target="_blank">Entre no Paraíso</a>   
+        </div>
+
+        <div class="discord-widget">
+            <iframe id="discord-base" src="https://discord.com/widget?id=1318417511779405905&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-same-origin allow-scripts"></iframe>
+        </div>
+    </div>
+
+    <script>
         setTimeout(() => {
-            document.getElementById('introScreen').style.display = 'none';
-            document.getElementById('mainContent').style.display = 'block';
-        }, 1000);
-    }, 2500); // Tempo da tela de apresentação (3 segundos)
-</script>  
+            document.getElementById('introScreen').classList.add('hidden');
+            document.addEventListener("mousemove", (e) => {
+            let x = (e.clientX / window.innerWidth) * 40;
+            let y = (e.clientY / window.innerHeight) * 50 - 25;
+            document.body.style.backgroundPosition = `${50 - x}% ${50 - y}%`;
+        });
+        }, 2500);
+    </script>
 
 </body>
 </html>

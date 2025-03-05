@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="paradise.css">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀" />
+    <meta property="og:title" content="𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔯𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀" />
     <meta property="og:description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿" />
     <meta property="og:image" content="https://github.com/khrdxz/khrdxz.github.io/blob/main/frieren.jpg?raw=true" />
     <meta property="og:url" content="https://discord.gg/ndD5VdYH" />
@@ -15,35 +15,44 @@
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀"/>
+    <meta name="twitter:title" content="𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔯𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀"/>
     <meta name="twitter:description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿" />
     <meta name="twitter:image" content="https://github.com/khrdxz/khrdxz.github.io/blob/main/asuka.jpg?raw=true"/>
     <meta name="twitter:url" content="https://discord.gg/ndD5VdYH"/>
 </head>
-<body>   
+<body>  
+    <!-- Tela de introdução -->
     <div class="intro-tela" id="introScreen">𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</div>
 
-    <div class="container">
-        <div class="intro-container">
-            <h2 class="intro-titulo">Bem-Vindos à 𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</h2>
-            <a class="discord-btn" href="https://discord.gg/ndD5VdYH" target="_blank">Entre no Paraíso</a>   
+    <div class="main-content">
+        <div class="container">
+            <div class="intro-container">
+                <h2 class="intro-titulo">Bem-Vindos à 𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</h2>
+            </div>
+
+            <div class="discord-widget">
+                <iframe id="discord-base" src="https://discord.com/widget?id=1318417511779405905&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-same-origin allow-scripts"></iframe>
+            </div>
         </div>
 
-        <div class="discord-widget">
-            <iframe id="discord-base" src="https://discord.com/widget?id=1318417511779405905&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-same-origin allow-scripts"></iframe>
+        <!-- Caixinha "Entre no Paraíso" agora corretamente abaixo do container -->
+        <div class="link-cont">
+            <a class="discord-btn" href="https://discord.gg/ndD5VdYH" target="_blank">Entre no Paraíso →</a>
         </div>
     </div>
 
     <script>
         setTimeout(() => {
-            document.getElementById('introScreen').classList.add('hidden');
-            document.addEventListener("mousemove", (e) => {
-            let x = (e.clientX / window.innerWidth) * 40;
-            let y = (e.clientY / window.innerHeight) * 50 - 25;
-            document.body.style.backgroundPosition = `${50 - x}% ${50 - y}%`;
-        });
-        }, 2500);
-    </script>
+            document.getElementById('introScreen').classList.add('hidden');  
 
+            document.body.classList.remove('no-scroll');  
+
+            document.addEventListener("mousemove", (e) => {
+                let x = (e.clientX / window.innerWidth) * 40;
+                let y = (e.clientY / window.innerHeight) * 50 - 25;
+                document.body.style.backgroundPosition = `${50 - x}% ${50 - y}%`;
+            });
+        }, 2000); 
+    </script>
 </body>
 </html>

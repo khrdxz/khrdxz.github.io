@@ -11,91 +11,160 @@ body {
     align-items: center;
     min-height: 100vh;
     background-image: url('Kitagawa.png'); 
-    background-size: cover;
-    background-size: 115%;
+    background-size: 112%;
     background-position: center; 
     background-repeat: no-repeat; 
-    background-attachment: fixed; 
+    background-attachment: fixed;
+    overflow: hidden;
+    transition: background-position 0.2s ease;
 }
+
 .intro-tela {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: #590d22;
+    background: #6A1B3D;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    transition: opacity 1s ease-in-out; 
+    font-size: 2.5rem;
+    font-weight: 600;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 10;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.intro-tela.hidden {
+    opacity: 0;
+    transform: scale(1.2);
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
 }
 
 .hidden {
-    opacity: 0; 
-    pointer-events: none; 
+    opacity: 0;
+    pointer-events: none;
 }
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    z-index: 5;
+}
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
+    gap: 40px;
     flex-wrap: wrap;
 }
+
 .intro-container {
     text-align: center;
+    margin-bottom: 90px;
     height: 60%;
     width: 40%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+    transform: translateY(120px);
+    animation: slideIn 2s ease-out forwards;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-.intro-container:hover {
-    transform: scale(1.04); 
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); 
-}
 .intro-titulo {
-    font-size: 2.5em;
-    color: #9a8c98;
+    font-size: 3em;
+    color: #fbf5e9;
     margin-bottom: 20px;
-    transition: transform 0.3s ease, color 0.3s ease; 
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .intro-titulo:hover {
-    transform: scale(1.04); 
-    color: #c9184a; 
-}
-.discord-btn {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    background-color: #c9184a;
-    color: white;
-    border-radius: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.05);
+    color: #fbf5e9;
 }
 
-.discord-btn:hover {
-    background-color: #a11037;
-    transform: scale(1.02);
-}
 .discord-widget {
     display: flex;
-    transition: transform 0.3s ease, color 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInWidget 2s ease-out forwards;
 }
-.discord-widget:hover {
-    transform: scale(1.02);
+
+@keyframes fadeInWidget {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .discord-widget iframe {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Responsivo */
+.discord-widget iframe:hover {
+    transform: scale(1.02);
+}
+
+.link-cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -165px;
+    margin-right: 367px;
+}
+
+.discord-btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #7a4b8f;
+    color: white;
+    border-radius: 21px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.discord-btn:hover {
+    background-color: #7a4b8f;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9);
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -108,11 +177,11 @@ body {
     }
 
     .intro-titulo {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
     .discord-btn {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 }
 
@@ -122,10 +191,10 @@ body {
     }
 
     .intro-titulo {
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     .discord-btn {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }

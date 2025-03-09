@@ -20,9 +20,12 @@
     <meta name="twitter:image" content="https://github.com/khrdxz/khrdxz.github.io/blob/main/asuka.jpg?raw=true"/>
     <meta name="twitter:url" content="https://discord.gg/ndD5VdYH"/>
 </head>
-<body>  
-    <!-- Tela de introdução -->
+<body> 
     <div class="intro-tela" id="introScreen">𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</div>
+
+    <div class="clock-container">
+        <span id="hours">00</span>h : <span id="minutes">00</span>m
+    </div>
 
     <div class="main-content">
         <div class="container">
@@ -35,13 +38,24 @@
             </div>
         </div>
 
-        <!-- Caixinha "Entre no Paraíso" agora corretamente abaixo do container -->
         <div class="link-cont">
             <a class="discord-btn" href="https://discord.gg/ndD5VdYH" target="_blank">Entre no Paraíso →</a>
         </div>
     </div>
 
     <script>
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateClock, 1000);
+        updateClock();
+
         setTimeout(() => {
             document.getElementById('introScreen').classList.add('hidden');  
 
@@ -52,7 +66,7 @@
                 let y = (e.clientY / window.innerHeight) * 50 - 25;
                 document.body.style.backgroundPosition = `${50 - x}% ${50 - y}%`;
             });
-        }, 2000); 
+        }, 2000);
     </script>
 </body>
 </html>

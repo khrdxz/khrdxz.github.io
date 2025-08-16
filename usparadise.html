@@ -20,53 +20,34 @@
     <meta name="twitter:image" content="https://github.com/khrdxz/khrdxz.github.io/blob/main/asuka.jpg?raw=true"/>
     <meta name="twitter:url" content="https://discord.gg/ndD5VdYH"/>
 </head>
-<body> 
-    <div class="intro-tela" id="introScreen">𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</div>
+<body>
+<div class="all-content" >
+    <nav class="menu">
+        <ul class="menu-a" >
+            <li><a href="#sobre">Twitch</a></li>
+            <li><a href="https://discord.gg/ndD5VdYH">Discord</a></li>
+        </ul>
+    </nav>
 
-    <div class="clock-container">
-        <span id="hours">00</span>h : <span id="minutes">00</span>m
-    </div>
+    <div class="intro-tela" id="introScreen">STᖇᙓSSᙓᗪ'S ᙎOᖇᒪᗪ🥀</div>
 
-    <div class="main-content">
+    <div class="main-content" >
         <div class="container">
             <div class="intro-container">
-                <h2 class="intro-titulo">Bem-Vindos à 𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔡'𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</h2>
+                <h2 class="intro-titulo">Bem-Vindos(as) à STᖇᙓSSᙓᗪ'S ᙎOᖇᒪᗪ🥀</h2>
             </div>
 
             <div class="discord-widget">
                 <iframe id="discord-base" src="https://discord.com/widget?id=1318417511779405905&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-same-origin allow-scripts"></iframe>
             </div>
         </div>
-
-        <div class="link-cont">
-            <a class="discord-btn" href="https://discord.gg/ndD5VdYH" target="_blank">Entre no Paraíso →</a>
+        
+        <div class="clock-container">
+            <span id="hours">00</span>h : <span id="minutes">00</span>m
         </div>
     </div>
-
-    <script>
-        function updateClock() {
-            const now = new Date();
-            let hours = now.getHours();
-            let minutes = now.getMinutes();
-            
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-        }
-        
-        setInterval(updateClock, 1000);
-        updateClock();
-
-        setTimeout(() => {
-            document.getElementById('introScreen').classList.add('hidden');  
-
-            document.body.classList.remove('no-scroll');  
-
-            document.addEventListener("mousemove", (e) => {
-                let x = (e.clientX / window.innerWidth) * 40;
-                let y = (e.clientY / window.innerHeight) * 50 - 25;
-                document.body.style.backgroundPosition = `${50 - x}% ${50 - y}%`;
-            });
-        }, 2000);
-    </script>
+</div>
+    
+<script src="prd.js"></script>
 </body>
 </html>

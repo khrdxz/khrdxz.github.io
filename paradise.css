@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('Kitagawa.png'); 
+    background-image: url('imgs/Kitagawa.png'); 
     background-size: 112%;
     background-position: center; 
     background-repeat: no-repeat; 
@@ -292,6 +292,7 @@ body {
     0% { opacity: 0; transform: translateY(100px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

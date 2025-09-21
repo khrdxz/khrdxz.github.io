@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('imgs/Kitagawa.png'); 
+    background-image: url(imgs/Marin\ \(Shizuku\ Kuroe\).jpeg); 
     background-size: 112%;
     background-position: center; 
     background-repeat: no-repeat; 
@@ -57,13 +57,13 @@ body {
 }
 .intro-container:hover {
     transform: scale(1.03);
-    box-shadow: 0 12px 150px rgba(94, 29, 152, 0.5);
-    --titulo-color: #5E1D98;
+    box-shadow: 0 12px 150px #af2abc;
+    --titulo-color: #af2abc;
 }
 
 .intro-container:hover .intro-titulo {
     transform: translateY(-5px);
-    text-shadow: 0 0 15px #5E1D98;
+    text-shadow: 0 0 15px #af2abc;
 }
 /* ======================
    MENU
@@ -104,7 +104,6 @@ body {
     position: relative;
     transition: all 0.4s ease;
 }
-
 .menu a::after {
     content: "";
     position: absolute;
@@ -129,7 +128,7 @@ body {
    CLOCK
 ====================== */
 .clock-container {
-    color: #ece4db;
+    color: white;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     padding: 15px 25px;
@@ -147,9 +146,19 @@ body {
 }
 
 .clock-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
+    color: #af2abc;
+    text-shadow: 0 0 120px #af2abc;
 }
-
+.clock-container ::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    transition: width 0.4s ease;
+}
 /* ======================
    INTRO TELA
 ====================== */
@@ -207,7 +216,7 @@ body {
 
 .discord-widget iframe:hover {
     transform: scale(1.02);
-    box-shadow: 0 10px 150px #006F00;
+    box-shadow: 0 10px 150px #0077b6
 }
 
 /* ======================
@@ -292,7 +301,3 @@ body {
     0% { opacity: 0; transform: translateY(100px); }
     100% { opacity: 1; transform: translateY(0); }
 }
-
-
-
-
